@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <title>DIGITAL CLOCK</title>
+    </head>
+    <body>
+        <div id="CLOCK">
+        9:09:09    
+        </div>
+     
+        <script>
+            setInterval(showtime,1000);
+            function showtime(){
+                let time =new Date();
+                let hours =time.getHours();
+                let minutes =time.getMinutes();
+                let seconds =time.getSeconds();
+                am_pm ="AM";
+        //    setting in time format
+             if(hours >12)
+               {
+                hours =hours -= 12;
+                am_pm ='PM';
+               }
+               else if(hours ==0)
+               {
+                hours = 12;
+                 am_pm ='AM';
+
+               }
+               if(hours <10)
+               {
+                hours ="0"+hours ;
+               }
+               if(minutes <10)
+               {
+                minutes ="0"+minutes ;             
+              }
+              if(seconds <10)
+              {
+                seconds ="0"+seconds ;
+              }
+              let currentTime = hours +" :"+ minutes +" :"+ seconds +":" +am_pm;
+              //Display the time
+              document.getElementById("CLOCK").innerHTML = currentTime;
+}
+showtime();
+        </script>
+    </body>
+</html>
