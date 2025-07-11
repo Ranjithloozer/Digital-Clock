@@ -12,4 +12,7 @@ seconds and updates in real-time with a user-friendly interface.
 - Lightweight and responsive design
 - Customizable layout and fonts
 
+  URL:
+  https://ranjithloozer.github.io/Digital-Clock/
+
 
