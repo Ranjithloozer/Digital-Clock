@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Clock | Stopwatch | Alarm | Timer</title>
+ 
+  
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="theme-toggle">
+    <button id="themeBtn">🌙 Dark Mode</button>
+  </div>
+
+  <div class="container">
+    <h1>🕓 Multi-Mode Clock</h1>
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="clock">Clock</button>
+      <button class="tab-btn" data-tab="stopwatch">Stopwatch</button>
+      <button class="tab-btn" data-tab="alarm">Alarm</button>
+      <button class="tab-btn" data-tab="timer">Timer</button>
+    </div>
+
+    <!-- Clock -->
+    <div class="section active" id="clock-section">
+      <div id="time">--:--:--</div>
+      <div id="date">Loading...</div>
+    </div>
+
+    <div class="section" id="stopwatch-section">
+      <div id="stopwatch-time">00:00:00</div>
+      <div class="controls">
+        <button id="startStopwatch">Start</button>
+        <button id="stopStopwatch">Stop</button>
+        <button id="resetStopwatch">Reset</button>
+      </div>
+    </div>
+  
+    <div class="section" id="alarm-section">
+      <p>Set Alarm:</p>
+      <select id="alarm-hour"></select> :
+      <select id="alarm-minute"></select>
+      <select id="alarm-ampm">
+        <option>AM</option>
+        <option>PM</option>
+      </select>
+      <br><br>
+      <button id="setAlarm">Set Alarm</button>
+      <div class="message" id="alarm-msg"></div>
+    </div>
+    <div class="section" id="timer-section">
+      <p>Set Countdown:</p>
+      <select id="timer-minute"></select> :
+      <select id="timer-second"></select>
+      <br><br>
+      <button id="startTimer">Start</button>
+      <button id="stopTimer">Stop</button>
+      <div id="countdown-display">00:00</div>
+      <div class="message" id="timer-msg"></div>
+    </div>
+  </div>
+
+  <!-- ✅ Simple default sound -->
+  <audio id="alarm-sound" src="https://www.soundjay.com/button/beep-07.wav" preload="auto"></audio>
+
+  <!-- ✅ Load script at the end -->
+  <script src="script.js"></script>
+</body>
+</html>
