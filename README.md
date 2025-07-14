@@ -15,3 +15,5 @@ A sleek and responsive Digital Clock web application built with HTML, CSS, and J
 - HTML5
 - CSS3 (Flexbox)
 - JavaScript (Date object, DOM manipulation)
+
+  GitHub link : https://ranjithloozer.github.io/Digital-Clock/
